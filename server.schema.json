@@ -21,7 +21,8 @@
     },
     "primaryColour": {
       "type": "string",
-      "format": "hex-color"
+      "format": "regex",
+      "pattern": "^#[A-Fa-f0-9]{6}$"
     },
     "type": {
       "type": "string",
