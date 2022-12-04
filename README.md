@@ -1,6 +1,6 @@
 # ServerRepository
 
-The ServerRepository is a list of information about Minecraft Servers to allow enriching information to be displayed in-game.
+The ServerRepository is a list of information about Minecraft Servers to allow enriching information to be displayed about servers while using Ember Client.
 
 ## Adding Your Server
 
