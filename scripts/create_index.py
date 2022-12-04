@@ -5,8 +5,8 @@ from os import listdir
 # Load the schema
 schema = load(open('server.schema.json'))
 
-def get_valid_servers():
-  validated_servers = []
+def get_servers():
+  servers = []
 
   # Read the files in the directory
   for server in listdir('servers'):
@@ -21,26 +21,28 @@ def get_valid_servers():
           validate(serverJson, schema)
 
           # Add the server to the index
-          validated_servers.append(serverJson)
+          servers.append(serverJson)
 
           print('OK')
         except Exception as e:
           print('FAILED')
           print(e)
 
-          exit(1)
+          # Something went wrong, we'll throw an exception
+          raise ValueError('Invalid server file: %s' % server)
   
-  return validated_servers
+  return servers
 
 if __name__ == '__main__':
+  # Get the validated servers
+  servers = get_servers()
+
   # Save the index
   print('Saving index...', end = ' ')
   try:
     with open('index.json', 'w') as f:
-      dump(get_valid_servers(), f)
+      dump(servers, f)
     print('OK')
   except Exception as e:
     print('FAILED')
-    print(e)
-
-    exit(1)
+    raise e
