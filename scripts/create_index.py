@@ -26,7 +26,6 @@ def get_servers():
           print('OK')
         except Exception as e:
           print('FAILED')
-          print(e)
 
           # Something went wrong, we'll throw an exception
           raise ValueError('Invalid server file: %s' % server)
