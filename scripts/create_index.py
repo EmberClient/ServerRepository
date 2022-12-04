@@ -6,7 +6,7 @@ from os import listdir
 schema = load(open('server.schema.json'))
 
 def get_servers():
-  servers = []
+  servers = {}
 
   # Read the files in the directory
   for server in listdir('servers'):
@@ -21,7 +21,7 @@ def get_servers():
           validate(serverJson, schema)
 
           # Add the server to the index
-          servers.append(serverJson)
+          servers[server] = serverJson
 
           print('OK')
         except Exception as e:
