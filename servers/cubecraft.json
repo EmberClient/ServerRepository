@@ -1,0 +1,7 @@
+{
+  "name": "Cubecraft",
+  "hosts": ["cubecraft.net"],
+  "versions": ["1.8", "1.12", "1.19"],
+  "primaryColour": "#3aa9ff",
+  "type": "Minigames"
+}
