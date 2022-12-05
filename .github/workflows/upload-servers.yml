@@ -7,7 +7,6 @@ on:
 
 jobs:
   upload-servers-json:
-    needs: validate-servers-json
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
