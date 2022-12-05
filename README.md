@@ -48,6 +48,8 @@ We support various different Minecraft versions and server types, a list of whic
 - Survival
 - Creative
 - PvP
+- Prison
+- Factions
 
 ### Minecraft Versions
 
