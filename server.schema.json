@@ -25,17 +25,20 @@
       "pattern": "^#[A-Fa-f0-9]{6}$"
     },
     "type": {
-      "type": "string",
-      "enum": [
-        "Vanilla",
-        "Minigames",
-        "Skyblock",
-        "Survival",
-        "Creative",
-        "PvP",
-        "Prison",
-        "Factions"
-      ]
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Vanilla",
+          "Minigames",
+          "Skyblock",
+          "Survival",
+          "Creative",
+          "PvP",
+          "Prison",
+          "Factions"
+        ]
+      }
     }
   }
 }

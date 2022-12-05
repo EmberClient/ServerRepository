@@ -3,5 +3,5 @@
   "hosts": ["lsc.gg"],
   "versions": ["1.7", "1.8", "1.19"],
   "primaryColour": "#ff3a3a",
-  "type": "PvP"
+  "type": ["PvP"]
 }

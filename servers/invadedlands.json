@@ -3,5 +3,5 @@
   "hosts": ["invadedlands.net"],
   "versions": ["1.8", "1.12", "1.19"],
   "primaryColour": "#F4B000",
-  "type": "PvP"
+  "type": ["PvP"]
 }

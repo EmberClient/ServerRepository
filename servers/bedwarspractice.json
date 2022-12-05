@@ -3,5 +3,5 @@
   "hosts": ["bedwarspractice.club"],
   "versions": ["1.8", "1.12", "1.19"],
   "primaryColour": "#ba1c34",
-  "type": "Minigames"
+  "type": ["Minigames"]
 }
