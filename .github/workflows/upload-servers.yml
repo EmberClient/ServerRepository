@@ -1,0 +1,35 @@
+name: Upload Servers
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload-servers-json:
+    needs: validate-servers-json
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+      - name: Validate servers & create index
+        run: |
+          python scripts/create_index.py
+
+      - name: Upload to R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CF_R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CF_R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'us-east-1'
+          AWS_S3_BUCKET_NAME: 'server-repository'
+          CF_R2_URL: ${{ secrets.CF_R2_URL }}
+        run: |
+          aws s3 cp servers.json s3://${AWS_S3_BUCKET_NAME}/servers.json --endpoint-url https://${CF_R2_URL} --content-type "application/json" --cache-control "public, max-age=86400"
