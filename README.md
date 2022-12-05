@@ -38,7 +38,7 @@ Your pull request will then be reviewed by one of our maintainers and merged int
 
 ## Supported Types
 
-We support various different Minecraft versions and server types (though any suggestions are welcome!)
+We support various different Minecraft versions and server types, a list of which can be found below:
 
 ### Server Types
 
@@ -55,3 +55,17 @@ We support various different Minecraft versions and server types (though any sug
 - 1.8
 - 1.12
 - 1.19
+
+## FAQ
+
+### Can I use this for my own project?
+
+Yes, you can use data from this repository for your own project as long as you follow the license terms.
+
+### Can I add my server to the list?
+
+Yes, you can add your server to the list by following the steps above.
+
+### I can't find a type that matches my server, what should I do?
+
+If you can't find a type that matches your server, you can create a pull request to add a new type to the list. If you do this, please make sure that you add the type to the list in the README.MD file. If you are unsure about what to add, you can create an issue and we will add it for you.

@@ -4,9 +4,12 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 
 jobs:
-  validate-servers:
+  validate-servers-json:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,3 +25,25 @@ jobs:
       - name: Validate servers & create index
         run: |
           python scripts/create_index.py
+
+  upload-servers-json:
+    needs: validate-servers-json
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-1
+
+      - name: Upload to R2
+        env:
+          CF_R2_ACCESS_KEY_ID: ${{ secrets.CF_R2_ACCESS_KEY_ID }}
+          CF_R2_SECRET_ACCESS_KEY: ${{ secrets.CF_R2_SECRET_ACCESS_KEY }}
+          CF_R2_URL: ${{ secrets.CF_R2_URL }}
+        run: |
+          aws s3 cp servers.json s3://$CF_R2_URL/servers.json --endpoint-url https://$CF_R2_URL

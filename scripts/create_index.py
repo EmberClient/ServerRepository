@@ -24,7 +24,7 @@ def get_servers():
           servers[server] = serverJson
 
           print('OK')
-        except Exception as e:
+        except Exception:
           print('FAILED')
 
           # Something went wrong, we'll throw an exception
@@ -39,7 +39,7 @@ if __name__ == '__main__':
   # Save the index
   print('Saving index...', end = ' ')
   try:
-    with open('index.json', 'w') as f:
+    with open('servers.json', 'w') as f:
       dump(servers, f)
     print('OK')
   except Exception as e:
