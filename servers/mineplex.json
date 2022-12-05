@@ -1,0 +1,7 @@
+{
+    "name": "Mineplex",
+    "hosts": ["us.mineplex.com", "hub.mineplex.com", "mineplex.eu", "clans.mineplex.com", "clanseu.mineplex.com"],
+    "versions": ["1.8", "1.12", "1.19"],
+    "primaryColour": "#F6A902",
+    "type": "Minigames"
+}

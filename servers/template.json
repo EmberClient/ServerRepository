@@ -1,0 +1,7 @@
+{
+    "name": "Server Name",
+    "hosts": ["ip.address"],
+    "versions": ["supported.version"],
+    "primaryColour": "#FFFFFF",
+    "type": "Vanilla"
+}
