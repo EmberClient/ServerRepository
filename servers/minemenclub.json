@@ -1,0 +1,7 @@
+{
+  "name": "Minemen Club",
+  "hosts": ["minemen.club", "mineman.club"],
+  "versions": ["1.7", "1.8"],
+  "primaryColour": "#e810e5",
+  "type": "PvP"
+}
