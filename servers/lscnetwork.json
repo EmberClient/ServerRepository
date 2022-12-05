@@ -1,0 +1,7 @@
+{
+  "name": "LSC Network",
+  "hosts": ["lsc.gg"],
+  "versions": ["1.7.10", "1.8.9", "1.19.2"],
+  "primaryColour": "#ff3a3a",
+  "type": "PvP"
+}
