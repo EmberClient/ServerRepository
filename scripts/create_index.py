@@ -20,8 +20,8 @@ def get_servers():
           # Validate the JSON
           validate(serverJson, schema)
 
-          # Add the server to the index
-          servers[server] = serverJson
+          serverName = server[:server.rfind('.')]
+          servers[serverName] = serverJson
 
           print('OK')
         except Exception:
