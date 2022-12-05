@@ -26,6 +26,8 @@ The JSON file should contain a key/value pair for each field that is needed for 
 }
 ```
 
+Please keep in mind that a single host will match all subdomains, so there's no need to add any additional hosts for regional proxies.
+
 ### Step 3: Commit and Push Your Changes
 
 Once you have created your JSON file, you will need to commit and push your changes to GitHub. To do this, use either the GitHub Desktop application or the command line. If you are using GitHub Desktop, simply select “Commit and Push” when you have finished making changes. If you are using the command line, type `git add <filename>` to add the file and `git commit -m "<message>"` to commit your changes locally. Finally, type `git push` to push your changes up to GitHub.
