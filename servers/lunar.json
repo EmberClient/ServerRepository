@@ -1,0 +1,7 @@
+{
+    "name": "The Lunar Network",
+    "hosts": ["lunar.gg"],
+    "version": ["1.7", "1.8", "1.12"],
+    "primaryColour": "#4DF9FA",
+    "type": ["PvP"]
+}
