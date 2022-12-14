@@ -3,5 +3,5 @@
   "hosts": ["hypixel.net"],
   "versions": ["1.8", "1.12", "1.19"],
   "primaryColour": "#e6ae47",
-  "type": "Minigames"
+  "type": ["Minigames"]
 }

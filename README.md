@@ -14,7 +14,7 @@ First, you will need to fork this repository so you have your own copy of it. To
 
 Once you have your own copy of the repository, you will need to create a new file containing your server's information in valid JSON format. This file should be named after your server and should be placed in the `/servers` directory.
 
-The JSON file should contain a key/value pair for each field that is needed for your server, such as name, any applicable IP address' or domain names, type, versions, etc. For example, a file for our test server might look like this:
+The JSON file should contain a key/value pair for each field that is needed for your server, such as name, any applicable IP address' or domain names, types, versions, etc. For example, a file for our test server might look like this:
 
 ```json
 {
@@ -22,7 +22,7 @@ The JSON file should contain a key/value pair for each field that is needed for 
   "hosts": ["ip.address"],
   "versions": ["supported.version"],
   "primaryColour": "#FFFFFF",
-  "type": "Vanilla"
+  "type": ["Vanilla"]
 }
 ```
 
