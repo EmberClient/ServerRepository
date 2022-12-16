@@ -1,0 +1,7 @@
+{
+  "name": "PvP Zone",
+  "hosts": ["pvp.zone", "dev.pvp.zone", "mythicalmc.org", "azarath.cc"],
+  "versions": ["1.7", "1.8"],
+  "primaryColour": "#FFAA00",
+  "type": ["PvP"]
+}
