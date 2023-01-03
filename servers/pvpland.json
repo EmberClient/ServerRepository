@@ -2,6 +2,6 @@
   "name": "PvP Land",
   "hosts": ["pvp.land"],
   "versions": ["1.7", "1.8"],
-  "primaryColour": "#000000",
-  "type": ["Practice"]
+  "primaryColour": "#2bb0fe",
+  "type": ["PvP"]
 }
