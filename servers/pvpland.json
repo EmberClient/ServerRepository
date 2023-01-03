@@ -1,0 +1,7 @@
+{
+  "name": "PvP Land",
+  "hosts": ["pvp.land"],
+  "versions": ["1.7", "1.8"],
+  "primaryColour": "#2bb0fe",
+  "type": ["PvP"]
+}
