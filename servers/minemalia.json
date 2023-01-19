@@ -2,6 +2,6 @@
     "name": "Server Name",
     "hosts": ["play.minemalia.com"],
     "versions": ["1.12","1.16","1.17","1.19"],
-    "primaryColour": "#FFFFFF",
+    "primaryColour": "#0C6452",
     "type": ["Prison","Factions","Skyblock","Minigames","Survival","Creative","PvP","Arcade"]
   }
