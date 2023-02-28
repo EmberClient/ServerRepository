@@ -1,0 +1,7 @@
+{
+  "name": "PvP Arcade",
+  "hosts": ["pvparca.de"],
+  "versions": ["1.7", "1.8"],
+  "primaryColour": "#C09613",
+  "type": ["PvP"]
+}
