@@ -32,7 +32,6 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CF_R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CF_R2_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'us-east-1'
           AWS_S3_BUCKET_NAME: 'server-repository'
           CF_R2_URL: ${{ secrets.CF_R2_URL }}
         run: |
