@@ -1,0 +1,7 @@
+{
+    "name": "Minemalia",
+    "hosts": ["minemalia.com"],
+    "versions": ["1.12","1.19"],
+    "primaryColour": "#0C6452",
+    "type": ["Survival"]
+  }

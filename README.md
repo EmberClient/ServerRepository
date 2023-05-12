@@ -52,6 +52,7 @@ We support various different Minecraft versions and server types, a list of whic
 - PvP
 - Prison
 - Factions
+- Arcade
 
 ### Minecraft Versions
 
