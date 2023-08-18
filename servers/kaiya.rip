@@ -3,5 +3,5 @@
   "hosts": ["kaiya.rip", "rengo.us"],
   "versions": ["1.7", "1.8"],
   "primaryColour": "#00FFFF",
-  "type": ["PvP", "UHC"]
+  "type": ["PvP"]
 }
