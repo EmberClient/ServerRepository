@@ -1,7 +1,7 @@
 {
   "name": "Rapy",
   "hosts": ["Rapy.pl"],
-  "versions": ["1.19", "1.20"],
+  "versions": ["1.19"],
   "primaryColour": "#ffbc01",
-  "type": ["SMP"]
+  "type": ["Survival"]
 }
