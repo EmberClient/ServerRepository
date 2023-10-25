@@ -1,6 +1,6 @@
 {
   "name": "Craftplay",
-  "hosts": ["Craftplay.pl"],
+  "hosts": ["craftplay.pl"],
   "versions": ["1.8", "1.12", "1.19"],
   "primaryColour": "#e6ae47",
   "type": ["Minigames"]
