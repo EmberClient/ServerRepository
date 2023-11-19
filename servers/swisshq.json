@@ -1,0 +1,7 @@
+{
+  "name": "SwissHQ Network",
+  "hosts": ["swisshq.net"],
+  "versions": ["1.7", "1.8"],
+  "primaryColour": "#F21D1D",
+  "type": ["PvP"]
+}
