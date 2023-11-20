@@ -1,0 +1,7 @@
+{
+  "name": "Kokscraft",
+  "hosts": ["kokscraft.pl"],
+  "versions": ["1.8", "1.12", "1.19"],
+  "primaryColour": "#f2e295",
+  "type": ["Minigames"]
+}
