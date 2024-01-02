@@ -1,0 +1,7 @@
+{
+  "name": "Expansioncraft",
+  "hosts": ["expansioncraft.net"],
+  "versions": ["1.19"],
+  "primaryColour": "#D200FF",
+  "type": ["PvP"]
+}
