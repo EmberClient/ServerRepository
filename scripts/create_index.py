@@ -1,47 +1,56 @@
 from jsonschema import validate
 from json import load, dump
 from os import listdir
+import os
 
-# Load the schema
-schema = load(open('server.schema.json'))
+def load_json(file_path):
+    """Load a JSON file from the given path."""
+    with open(file_path, 'r') as file:
+        return load(file)
 
-def get_servers():
-  servers = {}
+def validate_server_filename(server):
+    """Validate that the server file name is all lowercase."""
+    if not server.islower():
+        raise ValueError(f'Invalid server file name (must be all lowercase): {server}')
 
-  # Read the files in the directory
-  for server in listdir('servers'):
-      print('Validating %s...' % server, end = ' ')
+def validate_server_json(server_json):
+    """Validate the server JSON data against the schema."""
+    validate(server_json, schema)
 
-      # Open the file and load the JSON
-      with open('servers/%s' % server) as f:
+def process_server_file(file_path, schema):
+    """Process and validate a single server file."""
+    server_json = load_json(file_path)
+    validate_server_json(server_json)
+    server_name = os.path.splitext(os.path.basename(file_path))[0]
+    return server_name, server_json
+
+def get_servers(directory, schema):
+    """Load and validate all server files in the given directory."""
+    servers = {}
+    for server in listdir(directory):
+        print(f'Validating {server}...', end=' ')
         try:
-          serverJson = load(f)
+            validate_server_filename(server)
+            server_name, server_json = process_server_file(os.path.join(directory, server), schema)
+            servers[server_name] = server_json
+            print('OK')
+        except Exception as e:
+            print('FAILED')
+            raise ValueError(f'Invalid server file: {server}') from e
+    return servers
 
-          # Validate the JSON
-          validate(serverJson, schema)
-
-          serverName = server[:server.rfind('.')]
-          servers[serverName] = serverJson
-
-          print('OK')
-        except Exception:
-          print('FAILED')
-
-          # Something went wrong, we'll throw an exception
-          raise ValueError('Invalid server file: %s' % server)
-  
-  return servers
+def save_index(data, file_path):
+    """Save the data to the given file path as JSON."""
+    with open(file_path, 'w') as file:
+        dump(data, file)
 
 if __name__ == '__main__':
-  # Get the validated servers
-  servers = get_servers()
-
-  # Save the index
-  print('Saving index...', end = ' ')
-  try:
-    with open('servers.json', 'w') as f:
-      dump(servers, f)
-    print('OK')
-  except Exception as e:
-    print('FAILED')
-    raise e
+    schema = load_json('server.schema.json')
+    servers = get_servers('servers', schema)
+    print('Saving index...', end=' ')
+    try:
+        save_index(servers, 'servers.json')
+        print('OK')
+    except Exception as e:
+        print('FAILED')
+        raise e
