@@ -1,0 +1,7 @@
+{
+  "name": "Overcast Community",
+  "hosts": ["oc.tc"],
+  "versions": ["1.7", "1.8"],
+  "primaryColour": "#4c0704",
+  "type": ["PvP", "Minigames"]
+}
