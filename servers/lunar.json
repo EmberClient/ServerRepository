@@ -1,7 +1,7 @@
 {
-    "name": "Lunar Network",
-    "hosts": ["lunar.gg"],
-    "version": ["1.7", "1.8"],
-    "primaryColour": "#4DF9FA",
-    "type": ["PvP"]
+  "name": "Lunar Network",
+  "hosts": ["lunar.gg"],
+  "versions": ["1.7", "1.8"],
+  "primaryColour": "#4DF9FA",
+  "type": ["PvP"]
 }
