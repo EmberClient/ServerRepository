@@ -36,4 +36,4 @@ jobs:
           CF_R2_BUCKET_NAME: ${{ secrets.CF_R2_BUCKET_NAME }}
           CF_R2_URL: ${{ secrets.CF_R2_URL }}
         run: |
-          aws s3 cp servers.json s3://${CF_R2_BUCKET_NAME}/server-repository/servers.json --endpoint-url https://${CF_R2_URL} --content-type "application/json" --cache-control "public, max-age=86400"
+          aws s3 cp servers.json s3://${CF_R2_BUCKET_NAME}/server-repository/servers.json --endpoint-url https://${CF_R2_URL} --checksum-algorithm CRC32 --content-type "application/json" --cache-control "public, max-age=86400"
