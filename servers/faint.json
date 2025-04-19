@@ -1,0 +1,7 @@
+{
+  "name": "Faint",
+  "hosts": ["faint.gg"],
+  "versions": ["1.7", "1.8"],
+  "primaryColour": "#FF5733",
+  "type": ["PvP"]
+}
